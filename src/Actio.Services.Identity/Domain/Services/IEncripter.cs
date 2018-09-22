@@ -7,7 +7,7 @@ namespace Actio.Services.Identity.Domain.Services
 {
     public interface IEncripter
     {
-        string GetSalt(string value);
+        string GetSalt();
         string GetHash(string value, string salt);
     }
 }

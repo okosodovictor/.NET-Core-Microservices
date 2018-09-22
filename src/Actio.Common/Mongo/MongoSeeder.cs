@@ -26,6 +26,7 @@ namespace Actio.Common.Mongo
             {
                 return;
             }
+
             await CustomSeederAsync();
 
         }

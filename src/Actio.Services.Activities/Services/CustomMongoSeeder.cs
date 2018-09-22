@@ -1,6 +1,7 @@
 ﻿using Actio.Common.Mongo;
 using Actio.Services.Activities.Domain.Models;
 using Actio.Services.Activities.Domain.repositories;
+using Actio.Services.Identity.Domain.Models;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,8 @@ namespace Actio.Services.Activities.Services
                 "Sport",
                 "hobby"
             };
+
+            var user = new User("okosodovictor@yahoo.com", "Okosodovictor");
 
            await Task.WhenAll(categories.Select(x => _repo.AddAsync(new Category(x))));
         }
